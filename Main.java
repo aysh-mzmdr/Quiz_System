@@ -15,11 +15,11 @@ public class Main{
         QuestionFactory factory=new QuestionFactory();
         for(int i=0;i<QuestionFactory.size;i++){
             factory.questions[i].getQuestion();
-            ans=sc.next().charAt(0);
+            ans=Character.toUpperCase(sc.next().charAt(0));
             if(factory.questions[i].isCorrect(ans))
                 updateScore();
         }    
-        System.out.println("Score: "+score);
+        System.out.println("\nScore: "+score+"\n");
         sc.close();   
     }
 }
